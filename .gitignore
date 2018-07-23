@@ -1,3 +1,6 @@
 # Generated code files
 *.c
 *.h
+
+# Generated executables
+*.exe
