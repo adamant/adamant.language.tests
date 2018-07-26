@@ -45,7 +45,25 @@
                         },
                         "body": {
                             "#type": "block",
-                            "statements": []
+                            "statements": [
+                                {
+                                    "#type": "expression_statement",
+                                    "expression": {
+                                        "#type": "return_expression",
+                                        "expression": {
+                                            "#type": "add_expression",
+                                            "left_operand": {
+                                                "#type": "variable_expression",
+                                                "name": "a"
+                                            },
+                                            "right_operand": {
+                                                "#type": "variable_expression",
+                                                "name": "b"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
                         }
                     }
                 ]
