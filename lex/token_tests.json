@@ -317,23 +317,28 @@
         },
         {
             "kind": "keyword",
-            "text": "var"
+            "text": "var",
+            "permute": false
         },
         {
             "kind": "keyword",
-            "text": "void"
+            "text": "void",
+            "permute": false
         },
         {
             "kind": "keyword",
-            "text": "int"
+            "text": "int",
+            "permute": false
         },
         {
             "kind": "keyword",
-            "text": "bool"
+            "text": "bool",
+            "permute": false
         },
         {
             "kind": "keyword",
-            "text": "return"
+            "text": "return",
+            "permute": false
         }
     ],
     "future_tokens": [
@@ -409,6 +414,26 @@
         ],
         [ "identifier", "identifier" ],
         [ "identifier", "keyword" ],
+        [
+            { "string_literal": "\"\\" },
+            "token"
+        ],
+        [
+            { "string_literal": "\"\\" },
+            "whitespace"
+        ],
+        [
+            { "string_literal": "\"\\" },
+            "comment"
+        ],
+        [
+            { "string_literal": "\"\\" },
+            "identifier"
+        ],
+        [
+            { "string_literal": "\"\\" },
+            "keyword"
+        ],
         [ "keyword", "identifier" ],
         [ "keyword", "keyword" ]
     ]
