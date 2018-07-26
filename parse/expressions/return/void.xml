@@ -15,10 +15,10 @@
         </primitive_type>
         <block id="block1">
           <left_brace/>
-          <return_statement>
-            <return_keyword/>
+          <expression_statement>
+            <return_expression/>
             <semicolon/>
-          </return_statement>
+          </expression_statement>
           <right_brace/>
         </block>
       </function_declaration>
