@@ -2,7 +2,7 @@
   <code kind="compilation_unit"/>
   <expected_parse>
     <compilation_unit>
-      <function_declaration access_modifier="modifier1" name="identifier1" parameters="params1" return_type="type1" body="block1">
+      <function_declaration access_modifier="modifier1" name="identifier1" parameter_list="params1" return_type="type1" body="block1">
         <public_keyword id="modifier1"/>
         <identifier value="func" id="identifier1"/>
         <parameter_list id="params1">
