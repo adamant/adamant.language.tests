@@ -54,11 +54,13 @@
                                             "#type": "add_expression",
                                             "left_operand": {
                                                 "#type": "variable_expression",
-                                                "name": "a"
+                                                "name": "a",
+                                                "variable_name": "default::func$2().a"
                                             },
                                             "right_operand": {
                                                 "#type": "variable_expression",
-                                                "name": "b"
+                                                "name": "b",
+                                                "variable_name": "default::func$2().b"
                                             }
                                         }
                                     }
