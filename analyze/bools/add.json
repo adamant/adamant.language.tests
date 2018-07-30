@@ -54,6 +54,7 @@
                                         "expression": {
                                             "#type": "add_expression",
                                             "type": "unknown",
+                                            "diagnostics": [ 3 ],
                                             "left_operand": {
                                                 "#type": "variable_expression",
                                                 "name": "a",
