@@ -50,8 +50,10 @@
                                     "#type": "expression_statement",
                                     "expression": {
                                         "#type": "return_expression",
+                                        "type": "primitive:never",
                                         "expression": {
                                             "#type": "add_expression",
+                                            "type": "primitive:int",
                                             "left_operand": {
                                                 "#type": "variable_expression",
                                                 "name": "a",
