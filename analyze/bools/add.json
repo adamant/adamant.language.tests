@@ -53,6 +53,7 @@
                                         "type": "primitive:never",
                                         "expression": {
                                             "#type": "add_expression",
+                                            "type": "unknown",
                                             "left_operand": {
                                                 "#type": "variable_expression",
                                                 "name": "a",
