@@ -55,12 +55,14 @@
                                             "left_operand": {
                                                 "#type": "variable_expression",
                                                 "name": "a",
-                                                "variable_name": "default::func$2().a"
+                                                "variable_name": "default::func$2().a",
+                                                "type": "primitive:int"
                                             },
                                             "right_operand": {
                                                 "#type": "variable_expression",
                                                 "name": "b",
-                                                "variable_name": "default::func$2().b"
+                                                "variable_name": "default::func$2().b",
+                                                "type": "primitive:int"
                                             }
                                         }
                                     }
