@@ -317,6 +317,11 @@
         },
         {
             "kind": "keyword",
+            "text": "let",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
             "text": "var",
             "permute": false
         },
