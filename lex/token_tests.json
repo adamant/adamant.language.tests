@@ -339,6 +339,21 @@
             "kind": "keyword",
             "text": "return",
             "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "class",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "new",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "delete",
+            "permute": false
         }
     ],
     "future_tokens": [
