@@ -6,20 +6,20 @@
         <public_keyword id="modifier1"/>
         <identifier value="func" id="identifier1"/>
         <parameter_list id="params1">
-          <left_paren/>
-          <right_paren/>
+          <open_paren/>
+          <close_paren/>
         </parameter_list>
         <right_arrow/>
         <primitive_type id="type1">
           <void_keyword/>
         </primitive_type>
         <block id="block1">
-          <left_brace/>
+          <open_brace/>
           <expression_statement>
             <return_expression/>
             <semicolon/>
           </expression_statement>
-          <right_brace/>
+          <close_brace/>
         </block>
       </function_declaration>
     </compilation_unit>

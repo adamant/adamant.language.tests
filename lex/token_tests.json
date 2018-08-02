@@ -68,27 +68,27 @@
             "permute": false
         },
         {
-            "kind": "left_brace",
+            "kind": "open_brace",
             "text": "{"
         },
         {
-            "kind": "right_brace",
+            "kind": "close_brace",
             "text": "}"
         },
         {
-            "kind": "left_paren",
+            "kind": "open_paren",
             "text": "("
         },
         {
-            "kind": "right_paren",
+            "kind": "close_paren",
             "text": ")"
         },
         {
-            "kind": "left_bracket",
+            "kind": "open_bracket",
             "text": "["
         },
         {
-            "kind": "right_bracket",
+            "kind": "close_bracket",
             "text": "]"
         },
         {
