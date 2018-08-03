@@ -1,0 +1,13 @@
+public func() -> Test
+{
+    let y: Test;
+    {
+        let x: Test = new Test();
+        y = x;
+    }
+    return y;
+}
+
+public class Test
+{
+}

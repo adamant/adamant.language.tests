@@ -1,0 +1,106 @@
+{
+    "#type": "test",
+    "semantic_tree": {
+        "#type": "package",
+        "compilation_units": [
+            {
+                "#type": "compilation_unit",
+                "declarations": [
+                    {
+                        "#type": "function_declaration",
+                        "access": "public",
+                        "name": "func",
+                        "parameters": [],
+                        "return_type": {
+                            "#type": "type_name",
+                            "type": {
+                                "#type": "object_type",
+                                "name": "default::Test",
+                                "is_mutable": false
+                            }
+                        },
+                        "body": {
+                            "#type": "block",
+                            "statements": [
+                                {
+                                    "#type": "variable_declaration_statement",
+                                    "mutable_binding": false,
+                                    "name": "y",
+                                    "type": {
+                                        "#type": "object_type",
+                                        "name": "default::Test",
+                                        "is_mutable": false
+                                    },
+                                    "initializer": null
+                                },
+                                {
+                                    "#type": "block",
+                                    "statements": [
+                                        {
+                                            "#type": "variable_declaration_statement",
+                                            "mutable_binding": false,
+                                            "name": "x",
+                                            "type": {
+                                                "#type": "object_type",
+                                                "name": "default::Test",
+                                                "is_mutable": false
+                                            },
+                                            "initializer": {
+                                                "#type": "new_object_expression",
+                                                "type": {
+                                                    "#type": "object_type",
+                                                    "name": "default::Test",
+                                                    "is_mutable": false
+                                                },
+                                                "arguments": []
+                                            }
+                                        },
+                                        {
+                                            "#type": "expression_statement",
+                                            "expression": {
+                                                "#type": "assignment_expression",
+                                                "left_operand": {
+                                                    "#type": "variable_expression",
+                                                    "name": "y",
+                                                    "variable_name": "default::func$0().y",
+                                                    "type": "default::Test"
+                                                },
+                                                "right_operand": {
+                                                    "#type": "variable_expression",
+                                                    "name": "x",
+                                                    "variable_name": "default::func$0().x",
+                                                    "type": "default::Test",
+                                                    "diagnostics": [ 3001 ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "#type": "expression_statement",
+                                    "expression": {
+                                        "#type": "return_expression",
+                                        "type": "primitive:never",
+                                        "expression": {
+                                            "#type": "variable_expression",
+                                            "name": "y",
+                                            "variable_name": "default::func$0().y",
+                                            "type": "default::Test"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "#type": "class_declaration",
+                        "access": "public",
+                        "name": "Test",
+                        "is_mutable": false,
+                        "members": []
+                    }
+                ]
+            }
+        ]
+    }
+}
