@@ -7,6 +7,13 @@
                 "#type": "compilation_unit",
                 "declarations": [
                     {
+                        "#type": "class_declaration",
+                        "access": "public",
+                        "name": "Test",
+                        "is_mutable": false,
+                        "members": []
+                    },
+                    {
                         "#type": "function_declaration",
                         "access": "public",
                         "name": "func",
@@ -91,13 +98,6 @@
                                 }
                             ]
                         }
-                    },
-                    {
-                        "#type": "class_declaration",
-                        "access": "public",
-                        "name": "Test",
-                        "is_mutable": false,
-                        "members": []
                     }
                 ]
             }

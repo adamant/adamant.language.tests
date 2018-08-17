@@ -1,3 +1,7 @@
+public class Test
+{
+}
+
 public func() -> Test
 {
     let y: Test;
@@ -6,8 +10,4 @@ public func() -> Test
         y = x;
     }
     return y;
-}
-
-public class Test
-{
 }
