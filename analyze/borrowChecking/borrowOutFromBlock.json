@@ -34,9 +34,13 @@
                                     "mutable_binding": false,
                                     "name": "y",
                                     "type": {
-                                        "#type": "object_type",
-                                        "name": "default::Test",
-                                        "is_mutable": false
+                                        "#type": "lifetime_type",
+                                        "type": {
+                                            "#type": "object_type",
+                                            "name": "default::Test",
+                                            "is_mutable": false
+                                        },
+                                        "lifetime": "owned"
                                     },
                                     "initializer": null
                                 },

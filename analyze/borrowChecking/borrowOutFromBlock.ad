@@ -6,7 +6,7 @@ public func() -> Test
 {
     let y: Test;
     {
-        let x: Test = new Test();
+        let x: Test$owned = new Test();
         y = x;
     }
     return y;
