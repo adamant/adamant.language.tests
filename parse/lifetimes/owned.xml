@@ -1,0 +1,42 @@
+<test>
+  <code kind="compilation_unit"/>
+  <expected_parse>
+    <compilation_unit>
+      <class_declaration access_modifier="modifier1" name="identifier1">
+        <public_keyword id="modifier1"/>
+        <class_keyword/>
+        <identifier value="Test" id="identifier1"/>
+        <open_brace/>
+        <close_brace/>
+      </class_declaration>
+      <function_declaration access_modifier="modifier1" name="identifier1" parameter_list="params1" return_type="type1" body="block1">
+        <public_keyword id="modifier1"/>
+        <identifier value="func" id="identifier1"/>
+        <parameter_list id="params1">
+          <open_paren/>
+          <close_paren/>
+        </parameter_list>
+        <right_arrow/>
+        <primitive_type id="type1">
+          <void_keyword/>
+        </primitive_type>
+        <block id="block1">
+          <open_brace/>
+          <variable_declaration_statement>
+            <let_keyword/>
+            <identifier value="x"/>
+            <colon/>
+            <lifetime_type>
+              <identifier_name>
+                <identifier value="Test"/>
+              </identifier_name>
+              <dollar/>
+              <owned_keyword/>
+            </lifetime_type>
+          </variable_declaration_statement>
+          <close_brace/>
+        </block>
+      </function_declaration>
+    </compilation_unit>
+  </expected_parse>
+</test>
