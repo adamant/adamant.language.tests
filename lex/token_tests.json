@@ -217,6 +217,10 @@
             "text": "/="
         },
         {
+            "kind": "dollar",
+            "text": "$"
+        },
+        {
             "kind": "identifier",
             "text": "identifier",
             "value": "identifier"
