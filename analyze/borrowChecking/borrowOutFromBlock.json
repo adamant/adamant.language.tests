@@ -21,9 +21,13 @@
                         "return_type": {
                             "#type": "type_name",
                             "type": {
-                                "#type": "object_type",
-                                "name": "default::Test",
-                                "is_mutable": false
+                                "#type": "lifetime_type",
+                                "type": {
+                                    "#type": "object_type",
+                                    "name": "default::Test",
+                                    "is_mutable": false
+                                },
+                                "lifetime": "owned"
                             }
                         },
                         "body": {
@@ -34,13 +38,9 @@
                                     "mutable_binding": false,
                                     "name": "y",
                                     "type": {
-                                        "#type": "lifetime_type",
-                                        "type": {
-                                            "#type": "object_type",
-                                            "name": "default::Test",
-                                            "is_mutable": false
-                                        },
-                                        "lifetime": "owned"
+                                        "#type": "object_type",
+                                        "name": "default::Test",
+                                        "is_mutable": false
                                     },
                                     "initializer": null
                                 },
@@ -52,9 +52,13 @@
                                             "mutable_binding": false,
                                             "name": "x",
                                             "type": {
-                                                "#type": "object_type",
-                                                "name": "default::Test",
-                                                "is_mutable": false
+                                                "#type": "lifetime_type",
+                                                "type": {
+                                                    "#type": "object_type",
+                                                    "name": "default::Test",
+                                                    "is_mutable": false
+                                                },
+                                                "lifetime": "owned"
                                             },
                                             "initializer": {
                                                 "#type": "new_object_expression",
@@ -80,7 +84,7 @@
                                                     "#type": "variable_expression",
                                                     "name": "x",
                                                     "variable_name": "default::func$0().x",
-                                                    "type": "default::Test",
+                                                    "type": "default::Test$owned",
                                                     "diagnostics": [ 3001 ]
                                                 }
                                             }
