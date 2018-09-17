@@ -296,6 +296,11 @@
             "permute": false
         },
         {
+            "kind": "integer_literal",
+            "text": "123",
+            "value": 123
+        },
+        {
             "kind": "string_literal",
             "text": "\"Hello World!\"",
             "value": "Hello World!"
@@ -508,6 +513,8 @@
         ],
         [ "identifier", "identifier" ],
         [ "identifier", "keyword" ],
+        [ "identifier", "integer_literal" ],
+        [ "integer_literal", "integer_literal" ],
         [
             { "string_literal": "\"\\" },
             "token"
@@ -529,6 +536,7 @@
             "keyword"
         ],
         [ "keyword", "identifier" ],
-        [ "keyword", "keyword" ]
+        [ "keyword", "keyword" ],
+        [ "keyword", "integer_literal" ]
     ]
 }
