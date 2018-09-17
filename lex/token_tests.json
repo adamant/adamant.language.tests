@@ -104,6 +104,10 @@
             "text": "."
         },
         {
+            "kind": "dot_dot",
+            "text": ".."
+        },
+        {
             "kind": "colon",
             "text": ":"
         },
@@ -321,6 +325,10 @@
         },
         {
             "kind": "keyword",
+            "text": "private"
+        },
+        {
+            "kind": "keyword",
             "text": "let",
             "permute": false
         },
@@ -341,7 +349,17 @@
         },
         {
             "kind": "keyword",
+            "text": "uint",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
             "text": "bool",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "string",
             "permute": false
         },
         {
@@ -362,6 +380,56 @@
         {
             "kind": "keyword",
             "text": "delete",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "namespace",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "using",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "foreach",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "in",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "if",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "else",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "delete",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "and",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "or",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "xor",
             "permute": false
         }
     ],
@@ -386,6 +454,8 @@
         }
     ],
     "separate": [
+        [ "dot", "dot" ],
+        [ "dot", "dot_dot" ],
         [ "plus", "equals" ],
         [ "plus", "equals_equals" ],
         [
