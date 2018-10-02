@@ -1,5 +1,5 @@
 // exit code: 0
 
-public main() -> void
+public fn main() -> void
 {
 }

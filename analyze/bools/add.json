@@ -53,7 +53,7 @@
                                         "type": "primitive:never",
                                         "expression": {
                                             "#type": "add_expression",
-                                            "type": "unknown",
+                                            "type": "⧼Unknown Type⧽",
                                             "diagnostics": [ 2001 ],
                                             "left_operand": {
                                                 "#type": "variable_expression",

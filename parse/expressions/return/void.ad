@@ -1,4 +1,4 @@
-public func() -> void
+public fn func() -> void
 {
     return;
 }

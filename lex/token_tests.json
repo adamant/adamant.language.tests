@@ -486,6 +486,11 @@
             "kind": "keyword",
             "text": "base",
             "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "fn",
+            "permute": false
         }
     ],
     "future_tokens": [

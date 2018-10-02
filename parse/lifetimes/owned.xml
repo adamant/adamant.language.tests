@@ -11,6 +11,7 @@
       </class_declaration>
       <function_declaration access_modifier="modifier1" name="identifier1" parameter_list="params1" return_type="type1" body="block1">
         <public_keyword id="modifier1"/>
+        <fn_keyword />
         <identifier value="func" id="identifier1"/>
         <parameter_list id="params1">
           <open_paren/>

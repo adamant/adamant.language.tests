@@ -2,7 +2,7 @@ public class Test
 {
 }
 
-public func() -> Test$owned
+public fn func() -> Test$owned
 {
     let y: Test;
     {
