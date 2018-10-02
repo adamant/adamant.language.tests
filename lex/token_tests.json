@@ -436,6 +436,56 @@
             "kind": "keyword",
             "text": "xor",
             "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "struct",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "enum",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "byte",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "size",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "protected",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "unsafe",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "safe",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "init",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "self",
+            "permute": false
+        },
+        {
+            "kind": "keyword",
+            "text": "base",
+            "permute": false
         }
     ],
     "future_tokens": [

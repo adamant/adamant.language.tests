@@ -12,7 +12,7 @@
                         "name": "func",
                         "parameters": [],
                         "return_type": {
-                            "#type": "type_name",
+                            "#type": "type_name_expression",
                             "type": {
                                 "#type": "primitive_type",
                                 "kind": "void"
