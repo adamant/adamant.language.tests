@@ -52,7 +52,7 @@
                                         "#type": "return_expression",
                                         "type": "primitive:never",
                                         "expression": {
-                                            "#type": "plus_expression",
+                                            "#type": "add_expression",
                                             "type": "⧼Unknown Type⧽",
                                             "diagnostics": [ 2001 ],
                                             "left_operand": {
