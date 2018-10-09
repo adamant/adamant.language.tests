@@ -9,6 +9,11 @@ public fn logical_operators(a: bool, b: bool) -> void
     not a;
 }
 
+public fn arithmetic_operators(a: bool, b: bool) -> void
+{
+    a + b; // ERROR
+}
+
 public fn literals() -> void
 {
     var x: bool = true;

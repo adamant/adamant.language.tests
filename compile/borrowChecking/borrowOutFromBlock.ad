@@ -7,7 +7,7 @@ public fn func() -> Test$owned
     let y: Test;
     {
         let x: Test$owned = new Test();
-        y = x;
+        y = x; // ERROR
     }
     return y;
 }
