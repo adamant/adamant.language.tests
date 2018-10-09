@@ -1,0 +1,16 @@
+public fn parameter_type(_: bool) -> void { }
+public fn return_type(a: bool) -> bool { return a; }
+
+public fn logical_operators(a: bool, b: bool) -> void
+{
+    a and b;
+    a or b;
+    a xor b;
+    not a;
+}
+
+public fn literals() -> void
+{
+    var x: bool = true;
+    x = false;
+}
