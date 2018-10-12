@@ -2,3 +2,5 @@ public fn func() -> void
 {
     return;
 }
+
+public fn main() -> void { }

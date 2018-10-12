@@ -6,3 +6,5 @@ public fn func() -> void
 {
     let x: Test$owned;
 }
+
+public fn main() -> void { }
