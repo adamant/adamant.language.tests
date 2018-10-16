@@ -1,0 +1,6 @@
+// exit code: 1
+
+public fn main() -> int
+{
+    return 1;
+}
