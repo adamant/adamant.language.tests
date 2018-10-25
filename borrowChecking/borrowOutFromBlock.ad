@@ -7,7 +7,7 @@ public fn func() -> Test$owned
     let y: Test;
     {
         let x: Test$owned = new Test();
-        y = x; // ERROR
-    }
+        y = x;
+    } // ERROR borrowed value does not live long enough
     return y;
 }
