@@ -1,7 +1,7 @@
-public fn parameter_type(_: bool) -> void { }
+public fn parameter_type(_: bool) { }
 public fn return_type(a: bool) -> bool { return a; }
 
-public fn logical_operators(a: bool, b: bool) -> void
+public fn logical_operators(a: bool, b: bool)
 {
     a and b;
     a or b;
@@ -9,12 +9,12 @@ public fn logical_operators(a: bool, b: bool) -> void
     not a;
 }
 
-public fn arithmetic_operators(a: bool, b: bool) -> void
+public fn arithmetic_operators(a: bool, b: bool)
 {
     a + b; // ERROR
 }
 
-public fn literals() -> void
+public fn literals()
 {
     var x: bool = true;
     x = false;

@@ -2,4 +2,4 @@ public class Test
 {
 }
 
-public fn main() -> void { }
+public fn main() { }

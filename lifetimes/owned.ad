@@ -2,9 +2,9 @@ public class Test
 {
 }
 
-public fn func() -> void
+public fn func()
 {
     let x: Test$owned;
 }
 
-public fn main() -> void { }
+public fn main() { }

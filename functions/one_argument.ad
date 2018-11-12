@@ -1,5 +1,5 @@
-public fn func(_: int) -> void
+public fn func(_: int)
 {
 }
 
-public fn main() -> void { }
+public fn main() { }
