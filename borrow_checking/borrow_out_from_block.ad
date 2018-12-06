@@ -2,12 +2,12 @@ public class Test
 {
 }
 
-public fn func() -> Test$owned
+public fn func()
 {
     let y: Test;
     {
         let x: Test$owned = new Test();
         y = x;
     } // ERROR borrowed value does not live long enough
-    return y;
+    let z: Test = y;
 }
