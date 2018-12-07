@@ -1,0 +1,13 @@
+// exit code: 2
+public fn test_if(condition: bool) -> int
+{
+    if(condition)
+        return 1;
+    else
+        return 2;
+}
+
+public fn main() -> int
+{
+    return test_if(false);
+}
