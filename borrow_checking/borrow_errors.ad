@@ -1,0 +1,57 @@
+public fn main()
+{
+    bad_produce();
+    let book: Book$owned = new Book();
+    {
+        let borrow: Book = immutable_borrow_out(book);
+        mutable_borrow(mut book); // ERROR
+        immutable_borrow(borrow);
+    }
+    {
+        let borrow: Book = immutable_borrow_out(book);
+        immutable_borrow(mut book);
+        immutable_borrow(borrow);
+    }
+    {
+        let borrow: mut Book = mutable_borrow_out(book);
+        mutable_borrow(mut book); // ERROR
+        mutable_borrow(mut borrow);
+    }
+    {
+        let borrow: mut Book = mutable_borrow_out(book);
+        immutable_borrow(mut book); // ERROR
+        mutable_borrow(mut borrow);
+    }
+    double_mutable_borrow(mut book, mut book); // ERROR
+}
+
+public mut class Book
+{
+}
+
+public fn bad_produce() -> Book
+{
+    return new Book(); // ERROR
+}
+
+public fn immutable_borrow(book: Book)
+{
+}
+
+public fn double_mutable_borrow(b1: mut Book, b2: mut Book)
+{
+}
+
+public fn mutable_borrow(book: mut Book)
+{
+}
+
+public fn immutable_borrow_out(book: Book) -> Book$< book
+{
+    return book;
+}
+
+public fn mutable_borrow_out(book: mut Book) -> mut Book$< book
+{
+    return book;
+}

@@ -1,0 +1,10 @@
+public class Test
+{
+    public fn method() { }
+}
+
+public fn main()
+{
+    let t: Test = new Test();
+    t.method();
+}

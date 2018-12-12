@@ -1,0 +1,42 @@
+public fn main()
+{
+    let book: Book$owned = new Book();
+    // None of these are errors because the variable holding the borrow isn't used
+    {
+        let borrow: Book = immutable_borrow_out(book);
+        mutable_borrow(mut book);
+    }
+    {
+        let borrow: Book = immutable_borrow_out(book);
+        immutable_borrow(mut book);
+    }
+    {
+        let borrow: mut Book = mutable_borrow_out(book);
+        mutable_borrow(mut book);
+    }
+    {
+        let borrow: mut Book = mutable_borrow_out(book);
+        immutable_borrow(mut book);
+    }
+}
+
+public mut class Book
+{
+}
+public fn immutable_borrow(book: Book)
+{
+}
+
+public fn mutable_borrow(book: mut Book)
+{
+}
+
+public fn immutable_borrow_out(book: Book) -> Book$< book
+{
+    return book;
+}
+
+public fn mutable_borrow_out(book: mut Book) -> mut Book$< book
+{
+    return book;
+}

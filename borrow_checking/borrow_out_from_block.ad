@@ -2,7 +2,7 @@ public class Test
 {
 }
 
-public fn func()
+public fn main()
 {
     let y: Test;
     {

@@ -1,0 +1,59 @@
+public fn main()
+{
+    let book: Book$owned = produce();
+    // Recover mutability from ownership here
+    let book: mut Book$owned = take_give(move book);
+    immutable_borrow(book);
+    double_immutable_borrow(book, book);
+    mutable_borrow(mut book);
+    {
+        let borrowed: Book = immutable_borrow_out(book);
+    }
+    {
+        let borrowed: mut Book = mutable_borrow_out(mut book);
+    }
+
+    let immutable: Book$owned = new Book();
+    take_recover_mutable(move immutable);
+}
+
+public mut class Book
+{
+}
+
+public fn produce() -> Book$owned
+{
+    let book: Book$owned = new Book();
+    return book;
+}
+
+public fn take_give(book: Book$owned) -> Book$owned
+{
+    return book;
+}
+
+public fn immutable_borrow(book: Book)
+{
+}
+
+public fn double_immutable_borrow(b1: Book, b2: Book)
+{
+}
+
+public fn mutable_borrow(book: mut Book)
+{
+}
+
+public fn immutable_borrow_out(book: Book) -> Book$< book
+{
+    return book;
+}
+
+public fn mutable_borrow_out(book: mut Book) -> mut Book$< book
+{
+    return book;
+}
+
+public fn take_recover_mutable(book: mut Book$owned)
+{
+}

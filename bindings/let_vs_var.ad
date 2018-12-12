@@ -1,0 +1,170 @@
+public fn main()
+{
+    value_type_binding_mutability();
+    value_type_rebinding();
+    value_type_shadowing();
+    value_type_not_shadowing();
+
+    reference_type_binding_mutability();
+    reference_type_rebinding();
+    reference_type_shadowing();
+    reference_type_not_shadowing();
+}
+
+public fn value_type_binding_mutability()
+{
+   {
+        let x: int = 1;
+        x = 2; // ERROR
+    }
+    {
+        var x: int = 1;
+        x = 2;
+    }
+}
+
+public fn value_type_rebinding()
+{
+    {
+        let x: int = 1;
+        let x: int = 2;
+    }
+    {
+        let x: int = 1;
+        var x: int = 2; // ERROR
+    }
+    {
+        var x: int = 1;
+        let x: int = 2; // ERROR
+    }
+    {
+        var x: int = 1;
+        var x: int = 2; // ERROR
+    }
+}
+
+public fn value_type_shadowing()
+{
+    {
+        let x: int = 1;
+        {
+            let x: int = 2;
+        }
+    }
+    {
+        let x: int = 1;
+        {
+            let x: int = 2; // ERROR
+        }
+        let y: int = x;
+    }
+    {
+        let x: int = 1;
+        {
+            var x: int = 2; // ERROR
+        }
+    }
+    {
+        var x: int = 1;
+        {
+            let x: int = 2; // ERROR
+        }
+    }
+    {
+        var x: int = 1;
+        {
+            var x: int = 2; // ERROR
+        }
+    }
+}
+
+public fn value_type_not_shadowing()
+{
+    {
+        var x: int = 1;
+    }
+    {
+        var x: int = 2;
+    }
+}
+
+public class Test
+{
+}
+
+public fn reference_type_binding_mutability()
+{
+   {
+        let x: Test$owned = new Test();
+        x = new Test(); // ERROR
+    }
+    {
+        var x: Test$owned = new Test();
+        x = new Test();
+    }
+}
+
+public fn reference_type_rebinding()
+{
+    {
+        let x: Test$owned = new Test();
+        let x: Test$owned = new Test();
+    }
+    {
+        let x: Test$owned = new Test();
+        var x: Test$owned = new Test(); // ERROR
+    }
+    {
+        var x: Test$owned = new Test();
+        let x: Test$owned = new Test(); // ERROR
+    }
+    {
+        var x: Test$owned = new Test();
+        var x: Test$owned = new Test(); // ERROR
+    }
+}
+
+public fn reference_type_shadowing()
+{
+    {
+        let x: Test$owned = new Test();
+        {
+            let x: Test$owned = new Test();
+        }
+    }
+    {
+        let x: Test$owned = new Test();
+        {
+            let x: Test$owned = new Test(); // ERROR
+        }
+        let y: Test$owned = x;
+    }
+    {
+        let x: Test$owned = new Test();
+        {
+            var x: Test$owned = new Test(); // ERROR
+        }
+    }
+    {
+        var x: Test$owned = new Test();
+        {
+            let x: Test$owned = new Test(); // ERROR
+        }
+    }
+    {
+        var x: Test$owned = new Test();
+        {
+            var x: Test$owned = new Test(); // ERROR
+        }
+    }
+}
+
+public fn reference_type_not_shadowing()
+{
+    {
+        var x: Test$owned = new Test();
+    }
+    {
+        var x: Test$owned = new Test();
+    }
+}
