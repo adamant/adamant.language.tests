@@ -1,26 +1,12 @@
 public fn main()
 {
-    value_type_binding_mutability();
     value_type_rebinding();
     value_type_shadowing();
     value_type_not_shadowing();
 
-    reference_type_binding_mutability();
     reference_type_rebinding();
     reference_type_shadowing();
     reference_type_not_shadowing();
-}
-
-public fn value_type_binding_mutability()
-{
-   {
-        let x: int = 1;
-        x = 2; // ERROR
-    }
-    {
-        var x: int = 1;
-        x = 2;
-    }
 }
 
 public fn value_type_rebinding()
@@ -90,18 +76,6 @@ public fn value_type_not_shadowing()
 
 public class Test
 {
-}
-
-public fn reference_type_binding_mutability()
-{
-   {
-        let x: Test$owned = new Test();
-        x = new Test(); // ERROR
-    }
-    {
-        var x: Test$owned = new Test();
-        x = new Test();
-    }
 }
 
 public fn reference_type_rebinding()

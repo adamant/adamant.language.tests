@@ -1,0 +1,34 @@
+public fn main()
+{
+    value_type_binding_mutability();
+
+    reference_type_binding_mutability();
+}
+
+public fn value_type_binding_mutability()
+{
+   {
+        let x: int = 1;
+        x = 2; // ERROR
+    }
+    {
+        var x: int = 1;
+        x = 2;
+    }
+}
+
+public class Test
+{
+}
+
+public fn reference_type_binding_mutability()
+{
+   {
+        let x: Test$owned = new Test();
+        x = new Test(); // ERROR
+    }
+    {
+        var x: Test$owned = new Test();
+        x = new Test();
+    }
+}
