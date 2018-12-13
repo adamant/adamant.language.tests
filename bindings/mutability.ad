@@ -7,7 +7,7 @@ public fn main()
 
 public fn value_type_binding_mutability()
 {
-   {
+    {
         let x: int = 1;
         x = 2; // ERROR
     }
@@ -23,7 +23,7 @@ public class Test
 
 public fn reference_type_binding_mutability()
 {
-   {
+    {
         let x: Test$owned = new Test();
         x = new Test(); // ERROR
     }
