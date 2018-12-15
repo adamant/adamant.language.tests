@@ -3,10 +3,12 @@ public fn main()
     value_type_rebinding();
     value_type_shadowing();
     value_type_not_shadowing();
+    value_type_control_flow_not_rebinding();
 
     reference_type_rebinding();
     reference_type_shadowing();
     reference_type_not_shadowing();
+    reference_type_control_flow_not_rebinding();
 }
 
 public fn value_type_rebinding()
@@ -72,6 +74,17 @@ public fn value_type_not_shadowing()
     {
         var x: int = 2;
     }
+}
+
+public fn value_type_control_flow_not_rebinding(c: bool)
+{
+    if c
+    {
+        let x: int = 1;
+        return;
+    }
+
+    let x: int = 2;
 }
 
 public class Test
@@ -141,4 +154,15 @@ public fn reference_type_not_shadowing()
     {
         var x: Test$owned = new Test();
     }
+}
+
+public fn reference_type_control_flow_not_rebinding(c: bool)
+{
+    if c
+    {
+        let x: int = 1;
+        return;
+    }
+
+    let x: int = 2;
 }
