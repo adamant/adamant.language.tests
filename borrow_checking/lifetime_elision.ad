@@ -1,0 +1,22 @@
+public fn main()
+{
+    let book: Book$owned = new Book();
+    let mut_borrow: Book = mutable_borrow_out(mut book);
+    let borrow: book = immutable_borrow_out(mut_borrow);
+}
+
+public mut class Book
+{
+}
+
+// Equivalent to `fn immutable_borrow_out(book: Book) $book -> Book`
+public fn immutable_borrow_out(book: Book) -> Book
+{
+    return book;
+}
+
+// Equivalent to `fn mutable_borrow_out(book: mut Book) $book -> mut Book`
+public fn mutable_borrow_out(book: mut Book) -> mut Book
+{
+    return book;
+}
