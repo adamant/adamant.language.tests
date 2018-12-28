@@ -1,0 +1,14 @@
+namespace nested
+{
+    public fn function() {}
+}
+
+public fn function() -> int
+{
+    return -1;
+}
+
+public fn main()
+{
+    let i: int = function();
+}
