@@ -1,0 +1,19 @@
+public fn main()
+{
+    let book: Book$owned = new Book();
+    let borrow: Book = book;
+    mutable_borrow(mut book); // ERROR book is frozen
+    immutable_borrow(borrow);
+}
+
+public mut class Book
+{
+}
+
+public fn mutable_borrow(book: mut Book)
+{
+}
+
+public fn immutable_borrow(book: Book)
+{
+}

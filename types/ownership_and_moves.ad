@@ -3,9 +3,8 @@ public fn main()
     let book: Book$owned = new Book();
     take(book); // ERROR need `move`
     let borrow: Book = book;
-    let moved_book1: Book$owned = book; // ERROR
-    let moved_book2: Book$owned = move book; // ERROR
-    take(move borrow); // ERROR
+    let moved_book1: Book$owned = book; // ERROR need `move`
+    take(move borrow); // ERROR can't move from a borrow
 }
 
 public mut class Book
