@@ -3,12 +3,12 @@ public fn main()
     value_type_rebinding();
     value_type_shadowing();
     value_type_not_shadowing();
-    value_type_control_flow_not_rebinding();
+    value_type_control_flow_not_rebinding(true);
 
     reference_type_rebinding();
     reference_type_shadowing();
     reference_type_not_shadowing();
-    reference_type_control_flow_not_rebinding();
+    reference_type_control_flow_not_rebinding(true);
 }
 
 public fn value_type_rebinding()
@@ -124,7 +124,7 @@ public fn reference_type_shadowing()
         {
             let x: Test$owned = new Test(); // ERROR
         }
-        let y: Test$owned = x;
+        let y: Test$owned = move x;
     }
     {
         let x: Test$owned = new Test();
