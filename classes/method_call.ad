@@ -1,6 +1,6 @@
 public class Test
 {
-    public fn method() { }
+    public fn method(self) { }
 }
 
 public fn main()
