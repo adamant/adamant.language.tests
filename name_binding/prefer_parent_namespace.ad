@@ -1,14 +1,17 @@
 namespace nested
 {
-    public fn function() {}
+    public fn function() -> int
+    {
+        return 1;
+    }
 }
 
 public fn function() -> int
 {
-    return -1;
+    return 0;
 }
 
-public fn main()
+public fn main() -> int
 {
-    let i: int = function();
+    return function();
 }
