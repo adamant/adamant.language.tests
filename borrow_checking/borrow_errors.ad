@@ -4,25 +4,25 @@ public fn main()
     let book: Book$owned = new Book();
     {
         let borrow: Book = immutable_borrow_out(book);
-        mutable_borrow(mut book); // ERROR
+        mutable_borrow(mut book); // ERROR can't borrow mutably while already borrowed immutably
         immutable_borrow(borrow);
     }
     {
         let borrow: Book = immutable_borrow_out(book);
-        immutable_borrow(mut book);
+        immutable_borrow(book);
         immutable_borrow(borrow);
     }
     {
-        let borrow: mut Book = mutable_borrow_out(book);
-        mutable_borrow(mut book); // ERROR
+        let borrow: mut Book = mutable_borrow_out(mut book);
+        mutable_borrow(mut book); // ERROR can't borrow mutably while already borrowed mutably (can only do so once)
         mutable_borrow(mut borrow);
     }
     {
-        let borrow: mut Book = mutable_borrow_out(book);
-        immutable_borrow(mut book); // ERROR
+        let borrow: mut Book = mutable_borrow_out(mut book);
+        immutable_borrow(mut book); // ERROR can't borrow immutably while already borrowed mutably
         mutable_borrow(mut borrow);
     }
-    double_mutable_borrow(mut book, mut book); // ERROR
+    double_mutable_borrow(mut book, mut book); // ERROR can't borrow mutably multiple times
 }
 
 public mut class Book
