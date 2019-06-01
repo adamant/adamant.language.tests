@@ -7,10 +7,10 @@ public fn main()
     take(move borrow); // ERROR can't move from a borrow
 }
 
-public mut class Book
+public class Book
 {
 }
 
-public fn take(book: mut Book$owned)
+public fn take(book: Book$owned)
 {
 }

@@ -1,0 +1,36 @@
+public mut class Test
+{
+}
+
+public fn main()
+{
+    let m: mut Test$owned = new Test();
+    let _m: mut Test$owned = mut new Test();
+    let i: Test$owned = new Test();
+    let _i: Test$owned = mut new Test(); // should be a warning, we throw away mutability
+
+    mutable_borrow(mut m);
+    mutable_borrow(m); // ERROR must explicitly pass mutable
+
+    immutable_borrow(i);
+    immutable_borrow(mut i); // ERROR can't borrow imutable value mutably
+
+    mutable_take(move m);
+    mutable_take(move i);
+}
+
+public fn mutable_borrow(t: mut Test)
+{
+}
+
+public fn immutable_borrow(t: Test)
+{
+}
+
+public fn mutable_take(t: mut Test$owned)
+{
+}
+
+public fn immutable_take(t: Test$owned)
+{
+}

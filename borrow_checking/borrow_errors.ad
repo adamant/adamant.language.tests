@@ -1,7 +1,7 @@
 public fn main()
 {
     bad_produce();
-    let book: Book$owned = new Book();
+    let book: mut Book$owned = new Book();
     {
         let borrow: Book = immutable_borrow_out(book);
         mutable_borrow(mut book); // ERROR can't borrow mutably while already borrowed immutably
