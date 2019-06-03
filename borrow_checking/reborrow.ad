@@ -1,0 +1,19 @@
+public fn main()
+{
+    let x: mut Test$owned = new Test();
+    let y: mut Test = mut x;
+    immutable_borrow(x); // ERROR can't use `x` because it is borrowed mutably by `y`
+    mutable_borrow(mut y);
+}
+
+public mut class Test
+{
+}
+
+public fn immutable_borrow(t: Test)
+{
+}
+
+public fn mutable_borrow(t: mut Test)
+{
+}

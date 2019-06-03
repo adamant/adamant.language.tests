@@ -1,0 +1,27 @@
+fn main()
+{
+    let a: mut Test$owned = new Test();
+    let y: Test;
+    if false
+    {
+        // borrow
+        let x = a;
+        // share the borrow with new borrower y, hence extending the borrow scope
+        y = x;
+    }
+
+    mutable_borrow(mut a); // ERROR `a` is borrowed by `y`
+    immutable_borrow(y);
+}
+
+public mut class Test
+{
+}
+
+public fn immutable_borrow(t: Test)
+{
+}
+
+public fn mutable_borrow(t: mut Test)
+{
+}
