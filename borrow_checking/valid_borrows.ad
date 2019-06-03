@@ -6,12 +6,9 @@ public fn main()
     immutable_borrow(book);
     double_immutable_borrow(book, book);
     mutable_borrow(mut book);
-    {
-        let borrowed: Book = immutable_borrow_out(book);
-    }
-    {
-        let borrowed: mut Book = mutable_borrow_out(mut book);
-    }
+
+    let borrowed_imm: Book = immutable_borrow_out(book);
+    let borrowed_mut: mut Book = mutable_borrow_out(mut book);
 
     let immutable: Book$owned = new Book();
     take_recover_mutable(move immutable);
@@ -42,16 +39,6 @@ public fn double_immutable_borrow(b1: Book, b2: Book)
 
 public fn mutable_borrow(book: mut Book)
 {
-}
-
-public fn immutable_borrow_out(book: Book) $book -> Book
-{
-    return book;
-}
-
-public fn mutable_borrow_out(book: mut Book) $book -> mut Book
-{
-    return book;
 }
 
 public fn take_recover_mutable(book: mut Book$owned)
