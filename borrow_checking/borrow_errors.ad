@@ -53,5 +53,5 @@ public fn immutable_borrow_out(book: Book) $book -> Book
 
 public fn mutable_borrow_out(book: mut Book) $book -> mut Book
 {
-    return book;
+    return mut book;
 }
