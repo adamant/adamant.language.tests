@@ -1,6 +1,5 @@
 public fn main()
 {
-    bad_produce();
     let book: mut Book$owned = new Book();
     {
         let borrow: Book = immutable_borrow_out(book);
