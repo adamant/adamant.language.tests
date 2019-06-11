@@ -6,7 +6,7 @@ public fn main()
     mutable_borrow(mut y);
 
     let z: mut Test = mut y; // reborrow again
-    mutable_borrow(mut y); // EORROR borrowed by `z`
+    mutable_borrow(mut y); // ERROR borrowed by `z`
     mutable_borrow(mut z);
     mutable_borrow(mut y); // `z` ends so we can use `y` again
 }

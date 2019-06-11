@@ -11,11 +11,11 @@ public fn main()
         immutable_borrow(mut book);
     }
     {
-        let borrow: mut Book = mutable_borrow_out(book);
+        let borrow: mut Book = mutable_borrow_out(mut book);
         mutable_borrow(mut book);
     }
     {
-        let borrow: mut Book = mutable_borrow_out(book);
+        let borrow: mut Book = mutable_borrow_out(mut book);
         immutable_borrow(mut book);
     }
 }
