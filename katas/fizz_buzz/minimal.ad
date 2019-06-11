@@ -100,7 +100,7 @@ Fizz
 Fizz
 Buzz
 */
-public fn main(console: Console)
+public fn main(console: mut Console)
 {
     let up_to: uint = 100;
     var n: uint = 1;
