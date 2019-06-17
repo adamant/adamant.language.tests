@@ -1,6 +1,6 @@
 public fn main()
 {
-    let x: mut Test$owned = new Test();
+    let x: mut Test = new Test();
     let y: mut Test = mut x; // reborrow
     immutable_borrow(x); // ERROR can't use `x` because it is borrowed mutably by `y`
     mutable_borrow(mut y);

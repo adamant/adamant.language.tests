@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: mut Book$owned = new Book();
+    let book: mut Book = new Book();
     let borrow: Book = book;
     mutable_borrow(mut book); // ERROR book is frozen
     immutable_borrow(borrow);

@@ -1,8 +1,8 @@
 public fn main()
 {
-    let x: mut Test$owned = new Test();
+    let x: mut Test = new Test();
     let b: Test = x;
-    let y: mut Test$owned = move x; // Shows we can move `x` even though it is borrowed by `b`
+    let y: mut Test = move x; // Shows we can move `x` even though it is borrowed by `b`
     immutable_borrow(b);
 }
 

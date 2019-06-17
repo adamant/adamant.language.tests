@@ -94,54 +94,54 @@ public class Test
 public fn reference_type_rebinding()
 {
     {
-        let x: Test$owned = new Test();
-        let x: Test$owned = new Test();
+        let x: Test = new Test();
+        let x: Test = new Test();
     }
     {
-        let x: Test$owned = new Test();
-        var x: Test$owned = new Test(); // ERROR
+        let x: Test = new Test();
+        var x: Test = new Test(); // ERROR
     }
     {
-        var x: Test$owned = new Test();
-        let x: Test$owned = new Test(); // ERROR
+        var x: Test = new Test();
+        let x: Test = new Test(); // ERROR
     }
     {
-        var x: Test$owned = new Test();
-        var x: Test$owned = new Test(); // ERROR
+        var x: Test = new Test();
+        var x: Test = new Test(); // ERROR
     }
 }
 
 public fn reference_type_shadowing()
 {
     {
-        let x: Test$owned = new Test();
+        let x: Test = new Test();
         {
             let x: Test$owned = new Test();
         }
     }
     {
-        let x: Test$owned = new Test();
+        let x: Test = new Test();
         {
-            let x: Test$owned = new Test(); // ERROR
+            let x: Test = new Test(); // ERROR let can't shadow when outer let is used after end of scope
         }
-        let y: Test$owned = move x;
+        let y: Test = x;
     }
     {
-        let x: Test$owned = new Test();
+        let x: Test = new Test();
         {
-            var x: Test$owned = new Test(); // ERROR
-        }
-    }
-    {
-        var x: Test$owned = new Test();
-        {
-            let x: Test$owned = new Test(); // ERROR
+            var x: Test = new Test(); // ERROR var can't shadow let
         }
     }
     {
-        var x: Test$owned = new Test();
+        var x: Test = new Test();
         {
-            var x: Test$owned = new Test(); // ERROR
+            let x: Test = new Test(); // ERROR let can't shadow var
+        }
+    }
+    {
+        var x: Test = new Test();
+        {
+            var x: Test = new Test(); // ERROR var can't shadow var
         }
     }
 }
@@ -149,10 +149,10 @@ public fn reference_type_shadowing()
 public fn reference_type_not_shadowing()
 {
     {
-        var x: Test$owned = new Test();
+        var x: Test = new Test();
     }
     {
-        var x: Test$owned = new Test();
+        var x: Test = new Test();
     }
 }
 

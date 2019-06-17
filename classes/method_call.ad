@@ -5,6 +5,6 @@ public class Test
 
 public fn main()
 {
-    let t: Test$owned = new Test();
+    let t: Test = new Test();
     t.method();
 }

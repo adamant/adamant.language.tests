@@ -24,11 +24,11 @@ public class Test
 public fn reference_type_binding_mutability()
 {
     {
-        let x: Test$owned = new Test();
+        let x: Test = new Test();
         x = new Test(); // ERROR
     }
     {
-        var x: Test$owned = new Test();
+        var x: Test = new Test();
         x = new Test();
     }
 }

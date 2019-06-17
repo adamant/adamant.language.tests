@@ -4,10 +4,10 @@ public mut class Test
 
 public fn main()
 {
-    let m: mut Test$owned = new Test();
-    let _m: mut Test$owned = mut new Test();
-    let i: Test$owned = new Test();
-    let _i: Test$owned = mut new Test(); // should be a warning, we throw away mutability
+    let m: mut Test = new Test();
+    let _m: mut Test = mut new Test();
+    let i: Test = new Test();
+    let _i: Test = mut new Test(); // should be a warning, we throw away mutability
 
     mutable_borrow(mut m);
     mutable_borrow(m); // ERROR must explicitly pass mutable

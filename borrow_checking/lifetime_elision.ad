@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: mut Book$owned = new Book();
+    let book: mut Book = new Book();
     let mut_borrow: Book = mutable_borrow_out(mut book);
     let borrow: Book = immutable_borrow_out(mut_borrow);
 }

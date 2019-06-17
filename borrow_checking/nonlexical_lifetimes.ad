@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: mut Book$owned = new Book();
+    let book: mut Book = new Book();
     // None of these are errors because the variable holding the borrow isn't used
     {
         let borrow: Book = immutable_borrow_out(book);
