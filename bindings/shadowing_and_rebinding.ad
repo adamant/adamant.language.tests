@@ -11,58 +11,51 @@ public fn main()
     reference_type_control_flow_not_rebinding(true);
 }
 
+public fn use(_: int)
+{
+}
+
 public fn value_type_rebinding()
 {
-    {
-        let x: int = 1;
-        let x: int = 2;
-    }
-    {
-        let x: int = 1;
-        var x: int = 2; // ERROR
-    }
-    {
-        var x: int = 1;
-        let x: int = 2; // ERROR
-    }
-    {
-        var x: int = 1;
-        var x: int = 2; // ERROR
-    }
+    let w: int = 1;
+    let w: int = 2;
+
+    let x: int = 1;
+    var x: int = 2; // ERROR can't rebind `let` with `var`
+
+    var y: int = 1;
+    let y: int = 2; // ERROR can't rebind `var` with `let`
+
+    var z: int = 1;
+    var z: int = 2; // ERROR can't rebind `var` with `var`
 }
 
 public fn value_type_shadowing()
 {
+    let v: int = 1;
     {
-        let x: int = 1;
-        {
-            let x: int = 2;
-        }
+        let v: int = 2;
     }
+
+    let w: int = 1;
     {
-        let x: int = 1;
-        {
-            let x: int = 2; // ERROR
-        }
-        let y: int = x;
+        let w: int = 2; // ERROR can't shadow when outer binding used after nested scope
     }
+    use(w);
+
+    let x: int = 1;
     {
-        let x: int = 1;
-        {
-            var x: int = 2; // ERROR
-        }
+        var x: int = 2; // ERROR can't shadow `let` with `var`
     }
+
+    var y: int = 1;
     {
-        var x: int = 1;
-        {
-            let x: int = 2; // ERROR
-        }
+        let y: int = 2; // ERROR can't shadow `var` with `let`
     }
+
+    var z: int = 1;
     {
-        var x: int = 1;
-        {
-            var x: int = 2; // ERROR
-        }
+        var z: int = 2; // ERROR can't shadow `var` with `var`
     }
 }
 
@@ -93,56 +86,49 @@ public class Test
 
 public fn reference_type_rebinding()
 {
-    {
-        let x: Test = new Test();
-        let x: Test = new Test();
-    }
-    {
-        let x: Test = new Test();
-        var x: Test = new Test(); // ERROR
-    }
-    {
-        var x: Test = new Test();
-        let x: Test = new Test(); // ERROR
-    }
-    {
-        var x: Test = new Test();
-        var x: Test = new Test(); // ERROR
-    }
+    let w: Test = new Test();
+    let w: Test = new Test();
+
+    let x: Test = new Test();
+    var x: Test = new Test(); // ERROR can't rebind `let` with `var`
+
+    var y: Test = new Test();
+    let y: Test = new Test(); // ERROR can't rebind `var` with `let`
+
+    var z: Test = new Test();
+    var z: Test = new Test(); // ERROR can't rebind `var` with `var`
+}
+
+public fn use(_: Test)
+{
 }
 
 public fn reference_type_shadowing()
 {
+    let v: Test = new Test();
     {
-        let x: Test = new Test();
-        {
-            let x: Test$owned = new Test();
-        }
+        let v: Test$owned = new Test();
     }
+
+    let w: Test = new Test();
     {
-        let x: Test = new Test();
-        {
-            let x: Test = new Test(); // ERROR let can't shadow when outer let is used after end of scope
-        }
-        let y: Test = x;
+        let w: Test = new Test(); // ERROR let can't shadow when outer let is used after end of scope
     }
+    use(w);
+
+    let x: Test = new Test();
     {
-        let x: Test = new Test();
-        {
-            var x: Test = new Test(); // ERROR var can't shadow let
-        }
+        var x: Test = new Test(); // ERROR var can't shadow let
     }
+
+    var y: Test = new Test();
     {
-        var x: Test = new Test();
-        {
-            let x: Test = new Test(); // ERROR let can't shadow var
-        }
+        let y: Test = new Test(); // ERROR let can't shadow var
     }
+
+    var z: Test = new Test();
     {
-        var x: Test = new Test();
-        {
-            var x: Test = new Test(); // ERROR var can't shadow var
-        }
+        var z: Test = new Test(); // ERROR var can't shadow var
     }
 }
 
