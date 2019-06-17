@@ -41,6 +41,16 @@ public fn mutable_borrow(book: mut Book)
 {
 }
 
+public fn immutable_borrow_out(book: Book) $book -> Book
+{
+    return book;
+}
+
+public fn mutable_borrow_out(book: mut Book) $book -> mut Book
+{
+    return mut book;
+}
+
 public fn take_recover_mutable(book: mut Book$owned)
 {
 }

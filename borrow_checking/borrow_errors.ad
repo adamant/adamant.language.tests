@@ -30,7 +30,7 @@ public mut class Book
 
 public fn bad_produce() -> Book
 {
-    return new Book(); // ERROR
+    return new Book(); // ERROR borrowed value does not live long enough
 }
 
 public fn immutable_borrow(book: Book)
