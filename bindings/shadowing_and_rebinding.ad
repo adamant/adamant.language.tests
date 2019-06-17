@@ -11,7 +11,7 @@ public fn main()
     reference_type_control_flow_not_rebinding(true);
 }
 
-public fn use(_: int)
+public fn use_int(_: int)
 {
 }
 
@@ -41,7 +41,7 @@ public fn value_type_shadowing()
     {
         let w: int = 2; // ERROR can't shadow when outer binding used after nested scope
     }
-    use(w);
+    use_int(w);
 
     let x: int = 1;
     {
@@ -99,7 +99,7 @@ public fn reference_type_rebinding()
     var z: Test = new Test(); // ERROR can't rebind `var` with `var`
 }
 
-public fn use(_: Test)
+public fn use_test(_: Test)
 {
 }
 
@@ -114,7 +114,7 @@ public fn reference_type_shadowing()
     {
         let w: Test = new Test(); // ERROR let can't shadow when outer let is used after end of scope
     }
-    use(w);
+    use_test(w);
 
     let x: Test = new Test();
     {
