@@ -6,7 +6,7 @@ public fn main()
 {
     let y: Test;
     {
-        let x: Test$owned = new Test();
+        let x: Test = new Test();
         y = x;
     } // ERROR borrowed value does not live long enough
     let z: Test = y;

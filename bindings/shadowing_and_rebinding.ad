@@ -107,7 +107,7 @@ public fn reference_type_shadowing()
 {
     let v: Test = new Test();
     {
-        let v: Test$owned = new Test();
+        let v: Test = new Test();
     }
 
     let w: Test = new Test();

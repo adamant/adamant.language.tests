@@ -1,9 +1,9 @@
 public fn main()
 {
-    let book: Book$owned = new Book();
+    let book: Book = new Book();
     take(book); // ERROR need `move`
     let borrow: Book = book;
-    let moved_book1: Book$owned = book; // ERROR need `move`
+    let moved_book1: Book = book; // ERROR need `move`
     take(move borrow); // ERROR can't move from a borrow
 }
 

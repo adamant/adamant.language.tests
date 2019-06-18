@@ -1,6 +1,6 @@
 fn main()
 {
-    let a: mut Test$owned = new Test();
+    let a: mut Test = new Test();
     let y: Test;
     if false
     {

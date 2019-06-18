@@ -20,7 +20,7 @@ public mut class Book
 
 public fn produce() -> Book$owned
 {
-    let book: Book$owned = new Book();
+    let book: Book = new Book();
     return book;
 }
 
