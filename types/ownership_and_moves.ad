@@ -4,6 +4,9 @@ public fn main()
     take(book); // ERROR need `move`
     let borrow: Book = book;
     take(move borrow); // ERROR can't move from a borrow
+
+    take(move book);
+    let borrow = book; // ERROR use of moved value
 }
 
 public class Book
