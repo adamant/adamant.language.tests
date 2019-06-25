@@ -1,0 +1,46 @@
+public fn main()
+{
+    delay_by_borrow();
+    delay_by_alias();
+}
+
+
+public mut class Test
+{
+}
+
+public fn delay_by_borrow()
+{
+    let t = borrow(new Test());
+    // object is owned by temporary, but we must delay the delete
+    use(t);
+    // delete here since now the object isn't used
+    more();
+}
+
+public fn delay_by_alias()
+{
+    let t = alias(new Test());
+    // object is owned by temporary, but we must delay the delete
+    use(t);
+    // delete here since now the object isn't used
+    more();
+}
+
+public fn borrow(x: mut Test) $x -> mut Test
+{
+    return mut x;
+}
+
+public fn alias(x: Test) $x -> Test
+{
+    return x;
+}
+
+public fn use(_: Test)
+{
+}
+
+public fn more()
+{
+}

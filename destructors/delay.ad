@@ -1,0 +1,38 @@
+public fn main()
+{
+    delay_by_borrow();
+    delay_by_alias();
+}
+
+
+public mut class Test
+{
+}
+
+public fn delay_by_borrow()
+{
+    let t = mut new Test();
+    let b = mut t;
+    // `t` is no longer used, but we must delay the delete
+    use(b);
+    // delete here since now the object isn't used
+    more();
+}
+
+public fn delay_by_alias()
+{
+    let t = mut new Test();
+    let b = t;
+    // `t` is no longer used, but we must delay the delete
+    use(b);
+    // delete here since now the object isn't used
+    more();
+}
+
+public fn use(_: Test)
+{
+}
+
+public fn more()
+{
+}
