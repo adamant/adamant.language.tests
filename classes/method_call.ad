@@ -1,10 +1,15 @@
+// exit code: 42
+
 public class Test
 {
-    public fn method(self) { }
+    public fn method(self) -> int
+    {
+        return 42;
+    }
 }
 
-public fn main()
+public fn main() -> int
 {
     let t: Test = new Test();
-    t.method();
+    return t.method();
 }
