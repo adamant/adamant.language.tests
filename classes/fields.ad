@@ -1,0 +1,28 @@
+// exit code: 42
+
+public class Inner
+{
+    public var value: int;
+
+    public new()
+    {
+        self.value = -1;
+    }
+}
+
+public class Outer
+{
+    public var inner: Inner;
+
+    public new()
+    {
+        self.inner = new Inner();
+    }
+}
+
+public fn main() -> int
+{
+    let t = new Outer();
+    t.inner.value = 42;
+    return t.inner.value;
+}
