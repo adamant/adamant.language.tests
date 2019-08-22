@@ -1,7 +1,11 @@
-public fn main()
+// exit code: 10
+public fn main() -> int
 {
+    var i: int = 0;
     loop
     {
-        if true => break;
+        i = i + 1;
+        if i >= 10 => break;
     }
+    return i;
 }

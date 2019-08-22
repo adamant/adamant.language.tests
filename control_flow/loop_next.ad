@@ -1,4 +1,4 @@
-// exit code: 2
+// exit code: 10
 public fn main() -> int
 {
     var i: int = 0;
@@ -6,6 +6,6 @@ public fn main() -> int
     {
         i = i + 1;
         if(i < 10) => next;
-        return 2;
+        return i;
     }
 }
