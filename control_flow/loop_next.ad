@@ -1,0 +1,11 @@
+// exit code: 2
+public fn main() -> int
+{
+    var i: int = 0;
+    loop
+    {
+        i = i + 1;
+        if(i < 10) => next;
+        return 2;
+    }
+}

@@ -1,0 +1,7 @@
+public fn main()
+{
+    while true
+    {
+        break;
+    }
+}
