@@ -4,7 +4,7 @@ public class Test
 
 public fn func()
 {
-    let x: Test = new Test(); // Use to be of type Test$owned
+    let x: Test = new Test(); // Used to be of type Test$owned
 }
 
 public fn main() { }
