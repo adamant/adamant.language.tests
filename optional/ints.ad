@@ -21,5 +21,12 @@ public fn optional_variables()
 
 public fn optional_return(return_none: bool) -> int?
 {
-    return if return_none => none else => 35;
+    if return_none
+    {
+        return none;
+    }
+    else
+    {
+        return 35;
+    }
 }
