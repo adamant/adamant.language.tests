@@ -1,0 +1,4 @@
+public fn infinate_loop() -> never
+{
+    loop { }
+}
