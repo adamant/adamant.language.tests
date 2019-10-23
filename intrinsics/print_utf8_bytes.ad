@@ -1,0 +1,17 @@
+/* stdout:
+Hi!
+*/
+
+using intrinsics;
+
+public safe fn main()
+{
+    unsafe
+    {
+        let bytes = mem_allocate(3);
+        mem_set_byte(bytes, 72); // 'H'
+        mem_set_byte(bytes, 105); // 'i'
+        mem_set_byte(bytes, 33); // '!'
+        print_utf8_bytes(bytes, 3);
+    }
+}
