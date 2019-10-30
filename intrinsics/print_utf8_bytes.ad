@@ -1,6 +1,5 @@
 /* stdout:
-Hi!
-*/
+Hi!*/
 
 using intrinsics;
 
@@ -10,8 +9,8 @@ public safe fn main()
     {
         let bytes = mem_allocate(3);
         mem_set_byte(bytes, 72); // 'H'
-        mem_set_byte(bytes, 105); // 'i'
-        mem_set_byte(bytes, 33); // '!'
+        mem_set_byte(bytes+1, 105); // 'i'
+        mem_set_byte(bytes+2, 33); // '!'
         print_utf8_bytes(bytes, 3);
     }
 }
