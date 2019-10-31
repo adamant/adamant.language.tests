@@ -11,6 +11,6 @@ public safe fn main()
         mem_set_byte(bytes, 72); // 'H'
         mem_set_byte(bytes+1, 105); // 'i'
         mem_set_byte(bytes+2, 33); // '!'
-        print_utf8_bytes(bytes, 3);
+        print_utf8(bytes, 3);
     }
 }
