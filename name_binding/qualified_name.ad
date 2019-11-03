@@ -1,0 +1,14 @@
+// exit code: 42
+
+namespace nested
+{
+    public fn function() -> int
+    {
+        return 42;
+    }
+}
+
+public fn main() -> int
+{
+    return nested.function();
+}
