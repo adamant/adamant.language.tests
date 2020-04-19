@@ -13,7 +13,7 @@ public fn main()
     mutable_borrow(m); // ERROR must explicitly pass mutable
 
     immutable_borrow(i);
-    immutable_borrow(mut i); // ERROR can't borrow imutable value mutably
+    immutable_borrow(mut i); // ERROR can't borrow immutable value mutably
 
     mutable_take(move m);
     mutable_take(move i);
@@ -27,10 +27,10 @@ public fn immutable_borrow(t: Test)
 {
 }
 
-public fn mutable_take(t: mut Test$owned)
+public fn mutable_take(t: owned mut Test)
 {
 }
 
-public fn immutable_take(t: Test$owned)
+public fn immutable_take(t: owned Test)
 {
 }

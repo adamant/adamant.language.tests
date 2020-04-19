@@ -1,4 +1,4 @@
-public fn infinate_loop() -> never
+public fn infinite_loop() -> never
 {
     loop { }
 }

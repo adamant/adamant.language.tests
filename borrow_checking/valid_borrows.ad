@@ -18,13 +18,13 @@ public mut class Book
 {
 }
 
-public fn produce() -> Book$owned
+public fn produce() -> owned Book
 {
     let book: Book = new Book();
     return book;
 }
 
-public fn take_give(book: Book$owned) -> Book$owned
+public fn take_give(book: owned Book) -> owned Book
 {
     return book;
 }
@@ -41,16 +41,16 @@ public fn mutable_borrow(book: mut Book)
 {
 }
 
-public fn immutable_borrow_out(book: Book) $book -> Book
+public fn immutable_borrow_out(book: Book) -> Book ~> book
 {
     return book;
 }
 
-public fn mutable_borrow_out(book: mut Book) $book -> mut Book
+public fn mutable_borrow_out(book: mut Book) -> mut Book ~> book
 {
     return mut book;
 }
 
-public fn take_recover_mutable(book: mut Book$owned)
+public fn take_recover_mutable(book: owned mut Book)
 {
 }

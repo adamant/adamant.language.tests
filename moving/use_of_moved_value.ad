@@ -9,6 +9,6 @@ public class Book
 {
 }
 
-public fn take(book: Book$owned)
+public fn take(book: owned Book)
 {
 }

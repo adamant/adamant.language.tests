@@ -27,12 +27,12 @@ public fn delay_by_alias()
     more();
 }
 
-public fn borrow(x: mut Test) $x -> mut Test
+public fn borrow(x: mut Test) -> mut Test ~> x
 {
     return mut x;
 }
 
-public fn alias(x: Test) $x -> Test
+public fn alias(x: Test) -> Test ~> x
 {
     return x;
 }

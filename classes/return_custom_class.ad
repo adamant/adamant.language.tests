@@ -1,6 +1,6 @@
 public class Source
 {
-    public fn create(self) -> Result$owned
+    public fn create(self) -> owned Result
     {
         return new Result();
     }
