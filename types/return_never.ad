@@ -2,3 +2,7 @@ public fn infinite_loop() -> never
 {
     loop { }
 }
+
+public fn main()
+{
+}
