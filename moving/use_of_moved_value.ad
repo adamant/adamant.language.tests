@@ -1,6 +1,6 @@
 public fn main()
 {
-    let book: Book = new Book();
+    let book: owned Book = new Book();
     take(move book);
     let borrow = book; // ERROR use of moved value
 }
