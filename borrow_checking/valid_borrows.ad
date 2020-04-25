@@ -1,8 +1,8 @@
 public fn main()
 {
-    let book: Book = produce();
+    let book: owned Book = produce();
     // Recover mutability from ownership here
-    let book: mut Book = take_give(move book);
+    let book: owned mut Book = take_give(move book);
     immutable_borrow(book);
     double_immutable_borrow(book, book);
     mutable_borrow(mut book);
@@ -10,7 +10,7 @@ public fn main()
     let borrowed_imm: Book = immutable_borrow_out(book);
     let borrowed_mut: mut Book = mutable_borrow_out(mut book);
 
-    let immutable: Book = new Book();
+    let immutable: owned Book = new Book();
     take_recover_mutable(move immutable);
 }
 
