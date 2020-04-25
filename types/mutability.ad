@@ -4,10 +4,8 @@ public mut class Test
 
 public fn main()
 {
-    let m: mut Test = new Test();
-    let _m: mut Test = mut new Test();
-    let i: Test = new Test();
-    let _i: Test = mut new Test(); // should be a warning, we throw away mutability
+    let m: owned mut Test = new Test();
+    let i: owned Test = new Test();
 
     mutable_borrow(mut m);
     mutable_borrow(m); // ERROR must explicitly pass mutable
@@ -16,7 +14,7 @@ public fn main()
     immutable_borrow(mut i); // ERROR can't borrow immutable value mutably
 
     mutable_take(move m);
-    mutable_take(move i);
+    immutable_take(move i);
 }
 
 public fn mutable_borrow(t: mut Test)
