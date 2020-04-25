@@ -11,7 +11,7 @@ public mut class Test
 
 public fn delay_by_borrow()
 {
-    let t = mut new Test();
+    let t: mut = new Test();
     let b = mut t;
     // `t` is no longer used, but we must delay the delete
     use(b);
@@ -21,7 +21,7 @@ public fn delay_by_borrow()
 
 public fn delay_by_alias()
 {
-    let t = mut new Test();
+    let t = new Test();
     let b = t;
     // `t` is no longer used, but we must delay the delete
     use(b);
