@@ -4,13 +4,13 @@ fn main()
     let y: Test;
     if false
     {
-        // borrow
+        // share
         let x = a;
-        // share the borrow with new borrower y, hence extending the borrow scope
+        // re-share with y, hence extending the share
         y = x;
     }
 
-    mutable_borrow(mut a); // ERROR `a` is borrowed by `y`
+    mutable_borrow(mut a); // ERROR `a` is shared by `y`
     immutable_borrow(y);
 }
 
