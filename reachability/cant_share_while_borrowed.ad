@@ -1,0 +1,24 @@
+public fn main()
+{
+    let test: mut Test = new Test();
+    let borrowed: mut Test = capture_borrow(mut test);
+    share(mut test); // ERROR can't share while already borrowed
+    borrow(mut borrowed);
+}
+
+public mut class Test
+{
+}
+
+public fn share(test: Test)
+{
+}
+
+public fn borrow(test: mut Test)
+{
+}
+
+public fn capture_borrow(test: mut Test) -> mut Test ~> test
+{
+    return mut test;
+}

@@ -10,18 +10,18 @@ fn main()
         y = x;
     }
 
-    mutable_borrow(mut a); // ERROR `a` is shared by `y`
-    immutable_borrow(y);
+    borrow(mut a); // ERROR `a` is shared by `y`
+    share(y);
 }
 
 public mut class Test
 {
 }
 
-public fn immutable_borrow(t: Test)
+public fn share(t: Test)
 {
 }
 
-public fn mutable_borrow(t: mut Test)
+public fn borrow(t: mut Test)
 {
 }

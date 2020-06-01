@@ -1,0 +1,13 @@
+public fn main()
+{
+    let test: Test = factory();
+}
+
+public fn factory() -> Test
+{
+    return new Test(); // ERROR shared value does not live long enough
+}
+
+public mut class Test
+{
+}

@@ -1,0 +1,14 @@
+public fn main()
+{
+    let test: mut Test = new Test();
+
+    double_borrow(mut test, mut test); // ERROR can't borrow multiple times
+}
+
+public mut class Test
+{
+}
+
+public fn double_borrow(t1: mut Test, t2: mut Test)
+{
+}

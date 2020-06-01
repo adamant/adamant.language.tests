@@ -1,0 +1,20 @@
+public fn main()
+{
+    let test: mut Test = new Test();
+    let shared: Test = capture_share(test);
+    share(test);
+    share(shared);
+}
+
+public mut class Test
+{
+}
+
+public fn share(test: Test)
+{
+}
+
+public fn capture_share(test: Test) -> Test ~> test
+{
+    return test;
+}

@@ -1,0 +1,20 @@
+public fn main()
+{
+    let test: mut Test = new Test();
+    // Even though this share exists, it isn't yet used
+    let shared: Test = test;
+    borrow(mut test);
+    share(shared);
+}
+
+public mut class Test
+{
+}
+
+public fn borrow(test: mut Test)
+{
+}
+
+public fn share(test: Test)
+{
+}

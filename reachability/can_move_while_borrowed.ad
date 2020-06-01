@@ -3,13 +3,13 @@ public fn main()
     let x: owned mut Test = new Test();
     let b: Test = x;
     let y: owned mut Test = move x; // Shows we can move `x` even though it is borrowed by `b`
-    immutable_borrow(b);
+    share(b);
 }
 
 public mut class Test
 {
 }
 
-public fn immutable_borrow(t: Test)
+public fn share(t: Test)
 {
 }
