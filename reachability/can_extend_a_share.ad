@@ -5,7 +5,7 @@ fn main()
     if false
     {
         // share
-        let x = a;
+        let x = capture_share(a);
         // re-share with y, hence extending the share
         y = x;
     }
@@ -24,4 +24,9 @@ public fn share(t: Test)
 
 public fn borrow(t: mut Test)
 {
+}
+
+public fn capture_share(test: Test) -> Test ~> test
+{
+    return test;
 }
