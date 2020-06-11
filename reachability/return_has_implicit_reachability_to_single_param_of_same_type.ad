@@ -2,7 +2,7 @@ public fn main()
 {
     let test: mut Test = new Test();
     let borrowed: Test = capture_borrow(mut test);
-    let borrow: Test = capture_share(borrowed);
+    let shared: Test = capture_share(borrowed);
 }
 
 public mut class Test

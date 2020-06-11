@@ -1,0 +1,34 @@
+public fn main()
+{
+    let x: mut Test = new Test();
+    let y: mut Test = mut x; // reborrow
+    {
+        let t: mut Test = capture_borrow(mut x);
+        share(x); // ERROR can't use `x` because it is borrowed mutably by `y`
+        borrow(mut t);
+    }
+
+    let z: mut Test = mut y; // reborrow again
+    {
+        let t: mut Test = capture_borrow(mut z);
+        borrow(mut y); // ERROR borrowed by `z`
+        borrow(mut z);
+    }
+}
+
+public mut class Test
+{
+}
+
+public fn share(t: Test)
+{
+}
+
+public fn borrow(t: mut Test)
+{
+}
+
+public fn capture_borrow(test: mut Test) -> mut Test ~> test
+{
+    return mut test;
+}

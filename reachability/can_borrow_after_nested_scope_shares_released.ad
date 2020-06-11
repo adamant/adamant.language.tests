@@ -11,10 +11,6 @@ public mut class Test
 {
 }
 
-public fn share(test: Test)
-{
-}
-
 public fn borrow(test: mut Test)
 {
 }

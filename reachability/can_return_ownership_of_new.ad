@@ -1,0 +1,13 @@
+public fn main()
+{
+    let test: owned Test = produce();
+}
+
+public mut class Test
+{
+}
+
+public fn produce() -> owned Test
+{
+    return new Test();
+}

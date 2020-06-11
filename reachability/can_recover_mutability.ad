@@ -1,0 +1,16 @@
+public fn main()
+{
+    let test: iso Test = new Test();
+    // Recover mutability from ownership here
+    let test: iso mut Test = take(move test);
+}
+
+public mut class Test
+{
+}
+
+public fn take(test: iso Test) -> iso Test
+{
+    // implicit move
+    return test;
+}

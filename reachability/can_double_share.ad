@@ -1,0 +1,13 @@
+public fn main()
+{
+    let test: owned Test = new Test();
+    double_share(test, test);
+}
+
+public mut class Test
+{
+}
+
+public fn double_share(t1: Test, t2: Test)
+{
+}
