@@ -12,8 +12,8 @@ public fn main()
     {
         let t: mut Test = capture_borrow(mut z);
         borrow(mut y); // ERROR borrowed by `z`
-        borrow(mut z);
     }
+    borrow(mut z);
 }
 
 public mut class Test
