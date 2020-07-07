@@ -2,7 +2,7 @@
 
 using intrinsics;
 
-public safe fn main() -> int
+public /* safe */ fn main() -> int
 {
     unsafe
     {

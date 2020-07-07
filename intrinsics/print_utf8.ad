@@ -3,7 +3,7 @@ Hi!*/
 
 using intrinsics;
 
-public safe fn main()
+public /* safe */ fn main()
 {
     unsafe
     {
