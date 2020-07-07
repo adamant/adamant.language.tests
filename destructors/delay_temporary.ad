@@ -20,7 +20,7 @@ public fn delay_by_borrow()
 
 public fn delay_by_alias()
 {
-    let t = alias(new Test());
+    let t = \alias(new Test());
     // object is owned by temporary, but we must delay the delete
     use(t);
     // delete here since now the object isn't used
@@ -32,7 +32,7 @@ public fn borrow(x: mut Test) -> mut Test ~> x
     return mut x;
 }
 
-public fn alias(x: Test) -> Test ~> x
+public fn \alias(x: Test) -> Test ~> x
 {
     return x;
 }

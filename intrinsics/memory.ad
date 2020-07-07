@@ -6,12 +6,12 @@ public safe fn main() -> int
 {
     unsafe
     {
-        let from = mem_allocate(1);
-        mem_set_byte(from, 42);
+        let \from = mem_allocate(1);
+        mem_set_byte(\from, 42);
         let to = mem_allocate(1);
-        mem_copy(from, to, 1);
+        mem_copy(\from, to, 1);
         let value = mem_get_byte(to);
-        mem_deallocate(from);
+        mem_deallocate(\from);
         mem_deallocate(to);
         return value;
     }
