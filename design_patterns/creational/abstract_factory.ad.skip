@@ -1,0 +1,100 @@
+// stdout file: abstract_factory.txt
+
+// The one issue with the abstract factory pattern is whether the return types
+// can be `iso` or must be `owned`. Clearly any arguments will be assumed to
+// be reachable, but what can the base class assume about the isolation of the
+// returned objects? This could be a failure to be able to properly abstract
+// from the implementations of the concrete factories.
+
+// Factories
+
+public abstract class Abstract_Factory
+{
+    public abstract fn create_product_a() -> iso Abstract_Product_A;
+    public abstract fn create_product_b() -> iso Abstract_Product_B;
+}
+
+public class Concrete_Factory_1 : Abstract_Factory
+{
+    public override fn create_product_a() -> iso Abstract_Product_A
+    {
+        return new Product_A1();
+    }
+
+    public override fn create_product_b() -> iso Abstract_Product_B
+    {
+        return new Product_B1();
+    }
+}
+
+public class Concrete_Factory_2 : Abstract_Factory
+{
+    public override fn create_product_a() -> iso Abstract_Product_A
+    {
+        return new Product_A2();
+    }
+
+    public override fn create_product_b() -> iso Abstract_Product_B
+    {
+        return new Product_B2();
+    }
+}
+
+// Products
+
+public abstract class Abstract_Product_A
+{
+    // TODO use a getter
+    public abstract fn get_name() -> string;
+}
+
+public class Product_A1 : Abstract_Product_A
+{
+    public override fn get_name() -> string
+    {
+        return "A1";
+    }
+}
+
+public class Product_A2 : Abstract_Product_A
+{
+    public override fn get_name() -> string
+    {
+        return "A2";
+    }
+}
+
+public abstract class Abstract_Product_B
+{
+    // TODO use a getter
+    public abstract fn get_name() -> string;
+}
+
+public class Product_B1 : Abstract_Product_B
+{
+    public override fn get_name() -> string
+    {
+        return "B1";
+    }
+}
+
+public class Product_B2 : Abstract_Product_B
+{
+    public override fn get_name() -> string
+    {
+        return "B1";
+    }
+}
+
+// Client
+
+public fn main(console: mut Console)
+{
+    let f1 = new Concrete_Factory_1();
+    console.write_line(f1.create_product_a().get_name());
+    console.write_line(f1.create_product_b().get_name());
+
+    let f2 = new Concrete_Factory_2();
+    console.write_line(f2.create_product_a().get_name());
+    console.write_line(f2.create_product_b().get_name());
+}
