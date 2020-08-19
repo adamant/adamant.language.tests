@@ -8,33 +8,33 @@
 
 // Factories
 
-public abstract class Abstract_Factory
+public trait Factory
 {
-    public abstract fn create_product_a() -> iso Abstract_Product_A;
-    public abstract fn create_product_b() -> iso Abstract_Product_B;
+    public fn create_product_a() -> iso Product_A;
+    public fn create_product_b() -> iso Product_B;
 }
 
-public class Concrete_Factory_1 : Abstract_Factory
+public class Concrete_Factory_1 <: Abstract_Factory
 {
-    public override fn create_product_a() -> iso Abstract_Product_A
+    public fn create_product_a() -> iso Product_A
     {
         return new Product_A1();
     }
 
-    public override fn create_product_b() -> iso Abstract_Product_B
+    public fn create_product_b() -> iso Product_B
     {
         return new Product_B1();
     }
 }
 
-public class Concrete_Factory_2 : Abstract_Factory
+public class Concrete_Factory_2 <: Abstract_Factory
 {
-    public override fn create_product_a() -> iso Abstract_Product_A
+    public fn create_product_a() -> iso Product_A
     {
         return new Product_A2();
     }
 
-    public override fn create_product_b() -> iso Abstract_Product_B
+    public fn create_product_b() -> iso Product_B
     {
         return new Product_B2();
     }
@@ -42,45 +42,45 @@ public class Concrete_Factory_2 : Abstract_Factory
 
 // Products
 
-public abstract class Abstract_Product_A
+public trait Product_A
 {
     // TODO use a getter
-    public abstract fn get_name() -> string;
+    public fn get_name() -> string;
 }
 
-public class Product_A1 : Abstract_Product_A
+public class Product_A1 <: Product_A
 {
-    public override fn get_name() -> string
+    public fn get_name() -> string
     {
         return "A1";
     }
 }
 
-public class Product_A2 : Abstract_Product_A
+public class Product_A2 <: Product_A
 {
-    public override fn get_name() -> string
+    public fn get_name() -> string
     {
         return "A2";
     }
 }
 
-public abstract class Abstract_Product_B
+public trait Product_B
 {
     // TODO use a getter
-    public abstract fn get_name() -> string;
+    public fn get_name() -> string;
 }
 
-public class Product_B1 : Abstract_Product_B
+public class Product_B1 <: Product_B
 {
-    public override fn get_name() -> string
+    public fn get_name() -> string
     {
         return "B1";
     }
 }
 
-public class Product_B2 : Abstract_Product_B
+public class Product_B2 <: Product_B
 {
-    public override fn get_name() -> string
+    public fn get_name() -> string
     {
         return "B1";
     }
