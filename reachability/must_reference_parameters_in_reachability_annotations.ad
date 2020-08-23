@@ -1,0 +1,11 @@
+public class Test
+{
+}
+
+public fn test1() -> iso Test <~ x // ERROR
+{
+}
+
+public fn test2() -> iso Test <~ self // ERROR
+{
+}
